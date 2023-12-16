@@ -16,49 +16,49 @@ require_once 'header.php';
     <div class="thumb">
         <div class="box-container">
             <div class="box">
-                <img src="../uploads/images/pack.jpg" class="img_article" alt="article1">
+                <img src="../uploads/images/pack.jpg" alt="c">
                 <h3>Notre Pack</h3>
                 <p>Prix : €</p>
                 <button class="btn">Shop now</button>
             </div>
             <div class="box">
-                <img src="../uploads/images/bubble.jpg" class="img_article" alt="article2">
+                <img src="../uploads/images/bubble.jpg" alt="">
                 <h3>Bubble candle</h3>
                 <p>Prix : €</p>
                 <button class="btn">Shop now</button>
             </div>
             <div class="box">
-                <img src="../uploads/images/pot.jpg" class="img_article" alt="article3">
+                <img src="../uploads/images/pot.jpg" alt="">
                 <h3>Candle Pot</h3>
                 <p>Prix : €</p>
                 <button class="btn">Shop now</button>
             </div>
             <div class="box">
-                <img src="../uploads/images/blanc.jpg" class="img_article" alt="article4">
+                <img src="../uploads/images/blanc.jpg" alt="">
                 <h3>Candle déco</h3>
                 <p>Prix : €</p>
                 <button class="btn">Shop now</button>
             </div>
             <div class="box">
-                <img src="../uploads/images/sapin.jpg" class="img_article" alt="article5">
+                <img src="../uploads/images/sapin.jpg" alt="">
                 <h3>Bubble candle</h3>
                 <p>Prix : €</p>
                 <button class="btn">Shop now</button>
             </div>
             <div class="box">
-                <img src="../uploads/images/cock.jpg" class="img_article" alt="article6">
+                <img src="../uploads/images/cock.jpg" alt="">
                 <h3>Bubble candle</h3>
                 <p>Prix : €</p>
                 <button class="btn">Shop now</button>
             </div>
             <div class="box">
-                <img src="../uploads/images/noel.jpg" class="img_article" alt="article7">
+                <img src="../uploads/images/noel.jpg" alt="">
                 <h3>Bubble candle</h3>
                 <p>Prix : €</p>
                 <button class="btn">Shop now</button>
             </div>
             <div class="box">
-                <img src="../uploads/images/packrose.jpg" class="img_article" alt="article8">
+                <img src="../uploads/images/packrose.jpg" alt="">
                 <h3>Bubble candle</h3>
                 <p>Prix : €</p>
                 <button class="btn">Shop now</button>
