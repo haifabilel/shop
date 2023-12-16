@@ -17,7 +17,7 @@ require_once 'header.php';
         <div class="box-container">
             <div class="box">
                 <img src="../uploads/images/pack.jpg" class="img_article" alt="article1">
-                <h3>titre : </h3>
+                <h3>titre </h3>
                 <p>Prix : €</p>
                 <div class="button">
                     <button type="submit" name="add_to_cart"><i class="bi bi-plus-circle"></i></button>

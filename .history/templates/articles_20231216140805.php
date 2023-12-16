@@ -17,7 +17,7 @@ require_once 'header.php';
         <div class="box-container">
             <div class="box">
                 <img src="../uploads/images/pack.jpg" class="img_article" alt="article1">
-                <h3>titre : </h3>
+                <h3>Notre Pack</h3>
                 <p>Prix : €</p>
                 <div class="button">
                     <button type="submit" name="add_to_cart"><i class="bi bi-plus-circle"></i></button>
@@ -26,7 +26,7 @@ require_once 'header.php';
                 </div>
                 <input type="hidden" name="product_id" value="<?=$user['id']; ?>">
                 <div class="fles">
-                    <input type="number" name="quantité" required min="1" max="99" maxlength="2" class="quantité">
+                    <input type="text">
                 </div>
                 <button class="btn">Shop now</button>
             </div>
@@ -41,7 +41,7 @@ require_once 'header.php';
                 </div>
                 <input type="hidden" name="product_id" value="<?=$user['id']; ?>">
                 <div class="fles">
-                    <input type="number" name="quantité" required min="1" max="99" maxlength="2" class="quantité">
+                    <input type="text">
                 </div>
                 <button class="btn">Shop now</button>
             </div>
@@ -56,7 +56,7 @@ require_once 'header.php';
                 </div>
                 <input type="hidden" name="product_id" value="<?=$user['id']; ?>">
                 <div class="fles">
-                    <input type="number" name="quantité" required min="1" max="99" maxlength="2" class="quantité">
+                    <input type="text">
                 </div>
                 <button class="btn">Shop now</button>
             </div>
@@ -71,7 +71,7 @@ require_once 'header.php';
                 </div>
                 <input type="hidden" name="product_id" value="<?=$user['id']; ?>">
                 <div class="fles">
-                    <input type="number" name="quantité" required min="1" max="99" maxlength="2" class="quantité">
+                    <input type="text">
                 </div>
                 <button class="btn">Shop now</button>
             </div>
@@ -86,7 +86,7 @@ require_once 'header.php';
                 </div>
                 <input type="hidden" name="product_id" value="<?=$user['id']; ?>">
                 <div class="fles">
-                    <input type="number" name="quantité" required min="1" max="99" maxlength="2" class="quantité">
+                    <input type="text">
                 </div>
                 <button class="btn">Shop now</button>
             </div>
@@ -101,7 +101,7 @@ require_once 'header.php';
                 </div>
                 <input type="hidden" name="product_id" value="<?=$user['id']; ?>">
                 <div class="fles">
-                    <input type="number" name="quantité" required min="1" max="99" maxlength="2" class="quantité">
+                    <input type="text">
                 </div>
                 <button class="btn">Shop now</button>
             </div>
@@ -116,7 +116,7 @@ require_once 'header.php';
                 </div>
                 <input type="hidden" name="product_id" value="<?=$user['id']; ?>">
                 <div class="fles">
-                    <input type="number" name="quantité" required min="1" max="99" maxlength="2" class="quantité">
+                    <input type="text">
                 </div>
                 <button class="btn">Shop now</button>
             </div>
@@ -131,7 +131,7 @@ require_once 'header.php';
                 </div>
                 <input type="hidden" name="product_id" value="<?=$user['id']; ?>">
                 <div class="fles">
-                    <input type="number" name="quantité" required min="1" max="99" maxlength="2" class="quantité">
+                    <input type="text">
                 </div>
                 <button class="btn">Shop now</button>
             </div>

@@ -17,16 +17,11 @@ require_once 'header.php';
         <div class="box-container">
             <div class="box">
                 <img src="../uploads/images/pack.jpg" class="img_article" alt="article1">
-                <h3>titre : </h3>
+                <h3>Notre Pack</h3>
                 <p>Prix : €</p>
                 <div class="button">
                     <button type="submit" name="add_to_cart"><i class="bi bi-plus-circle"></i></button>
                     <button type="submit" name="add_to_wishlist"><i class="bi bi-heart-fill"></i></button>
-                    <a href="details_article.php?id=<? echo $user['id']; ?>"></a>
-                </div>
-                <input type="hidden" name="product_id" value="<?=$user['id']; ?>">
-                <div class="fles">
-                    <input type="number" name="quantité" required min="1" max="99" maxlength="2" class="quantité">
                 </div>
                 <button class="btn">Shop now</button>
             </div>
@@ -34,15 +29,6 @@ require_once 'header.php';
                 <img src="../uploads/images/bubble.jpg" class="img_article" alt="article2">
                 <h3>Bubble candle</h3>
                 <p>Prix : €</p>
-                <div class="button">
-                    <button type="submit" name="add_to_cart"><i class="bi bi-plus-circle"></i></button>
-                    <button type="submit" name="add_to_wishlist"><i class="bi bi-heart-fill"></i></button>
-                    <a href="details_article.php?id=<? echo $user['id']; ?>"></a>
-                </div>
-                <input type="hidden" name="product_id" value="<?=$user['id']; ?>">
-                <div class="fles">
-                    <input type="number" name="quantité" required min="1" max="99" maxlength="2" class="quantité">
-                </div>
                 <button class="btn">Shop now</button>
             </div>
             <div class="box">
@@ -52,11 +38,6 @@ require_once 'header.php';
                  <div class="button">
                     <button type="submit" name="add_to_cart"><i class="bi bi-plus-circle"></i></button>
                     <button type="submit" name="add_to_wishlist"><i class="bi bi-heart-fill"></i></button>
-                    <a href="details_article.php?id=<? echo $user['id']; ?>"></a>
-                </div>
-                <input type="hidden" name="product_id" value="<?=$user['id']; ?>">
-                <div class="fles">
-                    <input type="number" name="quantité" required min="1" max="99" maxlength="2" class="quantité">
                 </div>
                 <button class="btn">Shop now</button>
             </div>
@@ -67,11 +48,6 @@ require_once 'header.php';
                  <div class="button">
                     <button type="submit" name="add_to_cart"><i class="bi bi-plus-circle"></i></button>
                     <button type="submit" name="add_to_wishlist"><i class="bi bi-heart-fill"></i></button>
-                    <a href="details_article.php?id=<? echo $user['id']; ?>"></a>
-                </div>
-                <input type="hidden" name="product_id" value="<?=$user['id']; ?>">
-                <div class="fles">
-                    <input type="number" name="quantité" required min="1" max="99" maxlength="2" class="quantité">
                 </div>
                 <button class="btn">Shop now</button>
             </div>
@@ -82,11 +58,6 @@ require_once 'header.php';
                  <div class="button">
                     <button type="submit" name="add_to_cart"><i class="bi bi-plus-circle"></i></button>
                     <button type="submit" name="add_to_wishlist"><i class="bi bi-heart-fill"></i></button>
-                    <a href="details_article.php?id=<? echo $user['id']; ?>"></a>
-                </div>
-                <input type="hidden" name="product_id" value="<?=$user['id']; ?>">
-                <div class="fles">
-                    <input type="number" name="quantité" required min="1" max="99" maxlength="2" class="quantité">
                 </div>
                 <button class="btn">Shop now</button>
             </div>
@@ -97,11 +68,6 @@ require_once 'header.php';
                  <div class="button">
                     <button type="submit" name="add_to_cart"><i class="bi bi-plus-circle"></i></button>
                     <button type="submit" name="add_to_wishlist"><i class="bi bi-heart-fill"></i></button>
-                    <a href="details_article.php?id=<? echo $user['id']; ?>"></a>
-                </div>
-                <input type="hidden" name="product_id" value="<?=$user['id']; ?>">
-                <div class="fles">
-                    <input type="number" name="quantité" required min="1" max="99" maxlength="2" class="quantité">
                 </div>
                 <button class="btn">Shop now</button>
             </div>
@@ -112,11 +78,6 @@ require_once 'header.php';
                  <div class="button">
                     <button type="submit" name="add_to_cart"><i class="bi bi-plus-circle"></i></button>
                     <button type="submit" name="add_to_wishlist"><i class="bi bi-heart-fill"></i></button>
-                    <a href="details_article.php?id=<? echo $user['id']; ?>"></a>
-                </div>
-                <input type="hidden" name="product_id" value="<?=$user['id']; ?>">
-                <div class="fles">
-                    <input type="number" name="quantité" required min="1" max="99" maxlength="2" class="quantité">
                 </div>
                 <button class="btn">Shop now</button>
             </div>
@@ -127,11 +88,6 @@ require_once 'header.php';
                  <div class="button">
                     <button type="submit" name="add_to_cart"><i class="bi bi-plus-circle"></i></button>
                     <button type="submit" name="add_to_wishlist"><i class="bi bi-heart-fill"></i></button>
-                    <a href="details_article.php?id=<? echo $user['id']; ?>"></a>
-                </div>
-                <input type="hidden" name="product_id" value="<?=$user['id']; ?>">
-                <div class="fles">
-                    <input type="number" name="quantité" required min="1" max="99" maxlength="2" class="quantité">
                 </div>
                 <button class="btn">Shop now</button>
             </div>
