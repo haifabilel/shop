@@ -50,7 +50,6 @@ if(isset($_POST['addService'])){
       <th>Image</th>
       <th>Titre</th>
       <th>Description</th>
-      <th>prix</th>
       <th>Action</th>
       </tr>
     </thead>

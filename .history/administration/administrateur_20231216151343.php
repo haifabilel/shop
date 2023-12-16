@@ -8,25 +8,23 @@ require_once ('../templates/head.php');
 if(isset($_POST['addService'])){
     $titre = $_POST['titre'];
     $desc = $_POST['description'];
-    $prix = $_POST['prix'];
     $image = $_FILES['image'];
     $img_loc = $_FILES['image']['tmp_name'];
     $img_name = $_FILES['image']['name'];
     $img_des = "../uploads/".$img_name;
     move_uploaded_file($img_loc,'../uploads/'.$img_name);
 // Sécuriser contre les injections SQL
-    $query = "INSERT INTO articles (titre ,description,prix, image)
-    VALUES (:titre, :description,:prix, :image)";
+    $query = "INSERT INTO articles (titre ,description, image)
+    VALUES (:titre, :description, :image)";
     $statement = $conn->prepare($query);
   
     $data = [
         ':titre' => $titre,
         ':description' => $desc,
-        ':prix' => $prix,
         ':image' => $img_des,
     ];
     $stat = $statement->execute($data);
-    header('location:administrateur.php');
+    header('location:fetch_service.php');
 };
 
 ?>
@@ -50,7 +48,6 @@ if(isset($_POST['addService'])){
       <th>Image</th>
       <th>Titre</th>
       <th>Description</th>
-      <th>prix</th>
       <th>Action</th>
       </tr>
     </thead>

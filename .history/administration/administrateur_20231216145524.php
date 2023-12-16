@@ -8,25 +8,23 @@ require_once ('../templates/head.php');
 if(isset($_POST['addService'])){
     $titre = $_POST['titre'];
     $desc = $_POST['description'];
-    $prix = $_POST['prix'];
     $image = $_FILES['image'];
     $img_loc = $_FILES['image']['tmp_name'];
     $img_name = $_FILES['image']['name'];
     $img_des = "../uploads/".$img_name;
     move_uploaded_file($img_loc,'../uploads/'.$img_name);
 // Sécuriser contre les injections SQL
-    $query = "INSERT INTO articles (titre ,description,prix, image)
-    VALUES (:titre, :description,:prix, :image)";
+    $query = "INSERT INTO articles (titre ,description, image)
+    VALUES (:titre, :description, :image)";
     $statement = $conn->prepare($query);
   
     $data = [
         ':titre' => $titre,
         ':description' => $desc,
-        ':prix' => $prix,
         ':image' => $img_des,
     ];
     $stat = $statement->execute($data);
-    header('location:administrateur.php');
+    header('location:fetch_service.php');
 };
 
 ?>
@@ -50,7 +48,6 @@ if(isset($_POST['addService'])){
       <th>Image</th>
       <th>Titre</th>
       <th>Description</th>
-      <th>prix</th>
       <th>Action</th>
       </tr>
     </thead>
@@ -63,7 +60,6 @@ if(isset($_POST['addService'])){
         <tr>
         <td><img class="img_service" src="../uploads/<?php echo $user['image']; ?>" alt="image_card"></td>
         <td><?=$user['titre']?></td>
-        <td><?=$user['prix']?></td>
         <td><?=$user['description']?></td>
         <td>
         <a class="btn btn-primary" href="update_service.php?id=<?=$user['id']?>" ><i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a><br><br>
@@ -89,10 +85,8 @@ if(isset($_POST['addService'])){
       </div>
       <div class="modal-body">
       <div class="form-group">
-       <input type="text" name="titre" class="form-control"  placeholder="Titre" required><br>
-      </div>
-      <div class="form-group">
-       <input type="text" name="prix" class="form-control"  placeholder="prix" required><br>
+      
+       <input type="text" name="titre" class="form-control"  placeholder="Titre de service" required><br>
       </div>
       <div class="form-group">
     <textarea class="form-control" name="description" placeholder="Description..."required></textarea><br>

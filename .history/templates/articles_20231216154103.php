@@ -14,15 +14,15 @@ require_once '../administration/connexion.php';
         <hr class="ligne">
     </div>
 </div>
+<?php
+     $req = $conn->query('SELECT * FROM articles');
+     while($user = $req->fetch()){
+        ?>
     <div class="thumb">
         <div class="box-container">
-        <?php
-            $req = $conn->query('SELECT * FROM articles');
-            while($user = $req->fetch()){
-        ?>
             <div class="box">
                 <img src="../uploads/<?php echo $user['image']; ?>" class="img_article" alt="img_article">
-                <h3><?php echo $user['titre']; ?> </h3>
+                <h3>titre :<?php echo $user['titre']; ?> </h3>
                 <p>Prix :<?php echo $user['prix']; ?> €</p>
                 <div class="button">
                     <button type="submit" name="add_to_cart"><i class="bi bi-plus-circle"></i></button>

@@ -15,18 +15,17 @@ if(isset($_POST['addService'])){
     $img_des = "../uploads/".$img_name;
     move_uploaded_file($img_loc,'../uploads/'.$img_name);
 // Sécuriser contre les injections SQL
-    $query = "INSERT INTO articles (titre ,description,prix, image)
-    VALUES (:titre, :description,:prix, :image)";
+    $query = "INSERT INTO articles (titre ,description, image)
+    VALUES (:titre, :description, :image)";
     $statement = $conn->prepare($query);
   
     $data = [
         ':titre' => $titre,
         ':description' => $desc,
-        ':prix' => $prix,
         ':image' => $img_des,
     ];
     $stat = $statement->execute($data);
-    header('location:administrateur.php');
+    header('location:adminstrateur.php');
 };
 
 ?>
@@ -50,7 +49,6 @@ if(isset($_POST['addService'])){
       <th>Image</th>
       <th>Titre</th>
       <th>Description</th>
-      <th>prix</th>
       <th>Action</th>
       </tr>
     </thead>
