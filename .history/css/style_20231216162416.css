@@ -362,14 +362,14 @@ z-index: 2;
     background:#fff;
     padding-bottom:1rem;
     color:gray;
-    margin-left:70px;
  }
  .thumb .box-container .box img{
     transition:all 800ms ease-in-out;
     width:250px;
-    height:220px;  
+    height:220px;
+    margin-left:50px;
+    
  }
- 
  .thumb .box-container .box:hover img{
     transform:rotateY(180deg);
     cursor: pointer;
@@ -408,17 +408,12 @@ z-index: 2;
 }
 .box-container .box .button{
     text-align:center;
-    margin-left: 15%;
-    margin-top: 10px;
+    bottom:30%;
+    right:7%;
     border-radius:20px;
     background:#ebabda;
     padding:.5rem 1.5rem;
-    width:70%;
-}
-
-.quantité{
-    width:70%;
-    text-align: center;
+    wid
 }
 
 /* =============avis clients=========== */
@@ -576,7 +571,9 @@ z-index: 2;
     color:blue;
 }
 /* ============articles=========== */
-
+.img_article{
+    width:100%;
+}
 /* =============footer=========== */
 .top-footer{
     width: 100%;

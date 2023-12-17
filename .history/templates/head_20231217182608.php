@@ -3,7 +3,7 @@
  <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>shop candle</title>
+        <title>shop cz</title>
         <meta name="description" content="Notre garage est parfaitement équipé, le Garage V.Parrot entretient vos véhicules et propose également des occasions toutes marques garanties. Il assure également le diagnostic et la réparation
          toutes marques de vos véhicules.">
          <meta name="viewport" content="width=device-width, initial-scale=1">

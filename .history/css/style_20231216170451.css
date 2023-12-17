@@ -408,6 +408,7 @@ z-index: 2;
 }
 .box-container .box .button{
     text-align:center;
+    
     margin-left: 15%;
     margin-top: 10px;
     border-radius:20px;
@@ -415,7 +416,9 @@ z-index: 2;
     padding:.5rem 1.5rem;
     width:70%;
 }
-
+.box-container .box .button:hover{
+    transform:scale(1.1)
+}
 .quantité{
     width:70%;
     text-align: center;

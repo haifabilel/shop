@@ -408,16 +408,16 @@ z-index: 2;
 }
 .box-container .box .button{
     text-align:center;
-    margin-left: 15%;
+    right:7%;
+    margin-left: 25%;
     margin-top: 10px;
     border-radius:20px;
     background:#ebabda;
     padding:.5rem 1.5rem;
-    width:70%;
+    width:0%;
 }
-
 .quantité{
-    width:70%;
+    width:50%;
     text-align: center;
 }
 

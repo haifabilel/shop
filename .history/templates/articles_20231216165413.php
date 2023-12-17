@@ -31,7 +31,7 @@ require_once '../administration/connexion.php';
                 <div class="button">
                     <button type="submit" name="add_to_cart"><i class="bi bi-cart-plus-fill"></i></button>
                     <button type="submit" name="add_to_wishlist"><i class="bi bi-heart-fill"></i></button>
-                    <button type="submit" name="voir_article"><i class="bi bi-eye-fill"></i></button>
+                    <button type="submit"></button>
                     <a href="details_article.php?id=<? echo $user['id']; ?>"></a>
                 </div>
             </div>

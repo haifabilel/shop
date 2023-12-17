@@ -415,7 +415,12 @@ z-index: 2;
     padding:.5rem 1.5rem;
     width:70%;
 }
-
+.box-container .box .button i{
+    border
+}
+.box-container .box i:hover{
+    transform:scale(1.1)
+}
 .quantité{
     width:70%;
     text-align: center;

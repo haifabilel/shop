@@ -26,12 +26,11 @@ require_once '../administration/connexion.php';
                 <p>Prix :<?php echo $user['prix']; ?> €</p>
                 <input type="hidden" name="product_id" value="<?=$user['id']; ?>">
                 <div class="fles">
-                    <input type="number" name="quantité" placeholder="quantité" required min="1" max="99" maxlength="2" class="quantité">
+                    <input type="number" name="quantité" required min="1" max="99" maxlength="2" class="quantité">
                 </div>
                 <div class="button">
-                    <button type="submit" name="add_to_cart"><i class="bi bi-cart-plus-fill"></i></button>
+                    <button type="submit" name="add_to_cart"><i class="bi bi-plus-circle"></i></button>
                     <button type="submit" name="add_to_wishlist"><i class="bi bi-heart-fill"></i></button>
-                    <button type="submit" name="voir_article"><i class="bi bi-eye-fill"></i></button>
                     <a href="details_article.php?id=<? echo $user['id']; ?>"></a>
                 </div>
             </div>
