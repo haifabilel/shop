@@ -11,22 +11,8 @@ if (isset($_POST['add_wishlist'])) {
    $wishlist = $conn->prepare("SELECT *FROM wishlist WHERE user_id = ? AND product_id =?");
    $wishlist-> execute([$user_id, $product_id]);
 
-   $cart_num =$conn->prepare("SELECT *FROM cart WHERE user_id = ? AND product_id =?");
-   $cart_num ->execute([$user_id, $product_id]);
-
-   if ($wishlist->rowCount() > 0) {
-     $errors = 'produit exist déja dans wishlist';
-   }elseif ($cart_num->rowCount() > 0) {
-    $errors = 'produit exist déja dans votre panier';
-   }else {
-    $select_price = $conn->prepare("SELECT* FROM articles WHERE id =? LIMIT 1");
-    $select_price->execute([$product_id]);
-    $fetch_price = $select_price->fetch(PDO::FETCH_ASSOC);
-
-    $insert_wish= $conn->prepare('INSERT INTO wishlist (id, user_id,product_id, price) 
-    VALUES (?,?,?,?)');
-    $insert_wish->execute([$id,$user_id,$product_id,$fetch_price]);
-    $errors= 'Produit ajouté à votre wihlist avec succés';
+   if ($w) {
+    # code...
    }
 }
 ?>

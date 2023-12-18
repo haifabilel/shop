@@ -2,33 +2,6 @@
 require_once 'head.php';
 require_once 'header.php';
 require_once '../administration/connexion.php';
-
-//ajouter articles dans wishlist
-if (isset($_POST['add_wishlist'])) {
-   $id= $_GET['id'];
-   $product_id= $_POST['product_id'];
-
-   $wishlist = $conn->prepare("SELECT *FROM wishlist WHERE user_id = ? AND product_id =?");
-   $wishlist-> execute([$user_id, $product_id]);
-
-   $cart_num =$conn->prepare("SELECT *FROM cart WHERE user_id = ? AND product_id =?");
-   $cart_num ->execute([$user_id, $product_id]);
-
-   if ($wishlist->rowCount() > 0) {
-     $errors = 'produit exist déja dans wishlist';
-   }elseif ($cart_num->rowCount() > 0) {
-    $errors = 'produit exist déja dans votre panier';
-   }else {
-    $select_price = $conn->prepare("SELECT* FROM articles WHERE id =? LIMIT 1");
-    $select_price->execute([$product_id]);
-    $fetch_price = $select_price->fetch(PDO::FETCH_ASSOC);
-
-    $insert_wish= $conn->prepare('INSERT INTO wishlist (id, user_id,product_id, price) 
-    VALUES (?,?,?,?)');
-    $insert_wish->execute([$id,$user_id,$product_id,$fetch_price]);
-    $errors= 'Produit ajouté à votre wihlist avec succés';
-   }
-}
 ?>
 <section class="articles_section">
     <h2 class="title_articles">Nos articles</h2>
@@ -56,7 +29,7 @@ if (isset($_POST['add_wishlist'])) {
                     <input type="number" name="quantité" placeholder="quantité" required min="1" max="99" maxlength="2" class="quantité">
                 </div>
                 <div class="button">
-                    <button type="submit" name="add_cart"><i class="bi bi-cart-plus-fill"></i></button>
+                    <button type="submit" name="add_to_cart"><i class="bi bi-cart-plus-fill"></i></button>
                     <button type="submit" name="add_wishlist"><i class="bi bi-heart-fill"></i></button>
                     <button type="submit" name="voir_article"><i class="bi bi-eye-fill"></i></button>
                     <a href="details_article.php?id=<? echo $user['id']; ?>"></a>

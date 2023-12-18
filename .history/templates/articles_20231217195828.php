@@ -24,9 +24,7 @@ if (isset($_POST['add_wishlist'])) {
     $fetch_price = $select_price->fetch(PDO::FETCH_ASSOC);
 
     $insert_wish= $conn->prepare('INSERT INTO wishlist (id, user_id,product_id, price) 
-    VALUES (?,?,?,?)');
-    $insert_wish->execute([$id,$user_id,$product_id,$fetch_price]);
-    $errors= 'Produit ajouté à votre wihlist avec succés';
+    VALUES (?,?,?,?)')
    }
 }
 ?>
