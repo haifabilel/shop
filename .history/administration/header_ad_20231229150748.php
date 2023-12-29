@@ -8,9 +8,10 @@ require_once '../templates/head.php';
         </a>
         <nav class="navbar">
             <a href="../index.php">Accueil</a>
-            <a href="gerer_articles.php">Articles</a>
+            <a href="gerer_">Articles</a>
             <a href="order.php">Commandes</a>
-            <a href="../templates/contact.php">Messages clients</a>
+            <a href="about.php">About us</a>
+            <a href="../templates/contact.php">Contact</a>
         </nav>
         <div class="icons">
             <i class="bi bi-person-fill" id="user-btn"></i>

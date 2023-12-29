@@ -1,7 +1,7 @@
 <?php
 require_once ('connexion.php');
 require_once ('../templates/head.php');
-
+require_once ('../administration/header_ad.php');
 
 
 if (!empty($_POST)) {
@@ -27,7 +27,7 @@ if (!empty($_POST)) {
             $errors['cpassword'] = "Les mots de passe ne correspondent pas";
         } else {
             // Authentification réussie, rediriger vers la page appropriée
-            header('Location: administrateur.php');
+            // header('Location: administrateur.php');
             exit();
         }
     }
