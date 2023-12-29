@@ -3,8 +3,7 @@ require_once 'head.php';
 require_once './administration/connexion.php';
 ?>
 
-<section class="section_avis">
-    <h2 class="avis_title">Vos avis</h2>
+<section>
     <div id="carouselExample" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <?php
@@ -32,7 +31,7 @@ require_once './administration/connexion.php';
             <span class="sr-only">Previous</span>
         </a>
         <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="left-arrow" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
     </div>

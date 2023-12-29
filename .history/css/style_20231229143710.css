@@ -486,7 +486,7 @@ z-index: 2;
     }
 } */
 .section_avis{
-    margin-top: 5%;
+    margin-top: 10%;
 }
 .testimonial-item h3{
     color: #80005e;
@@ -499,8 +499,8 @@ z-index: 2;
 .testimonial-item i{
     color:#80005e;
 }
-.carousel-control-prev-icon,
-.carousel-control-next-icon{
+.left-arrow,
+.testimonial-container .container .right-arrow{
     position:absolute;
     top: 40%;
     transform: translateY(-50%);

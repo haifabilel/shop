@@ -7,9 +7,9 @@ if(isset($_POST["rating_data"])) {
 
 
 	$data = array(
-		':user_name'		=>  $_POST['user_name'],
+		':user_name'		=> htmlspecialchars($_POST['user_name'], ENT_QUOTES),
 		':user_rating'		=>	$_POST["rating_data"],
-		':user_review'		=>	$_POST['user_review'],
+		':user_review'		=>	htmlspecialchars($_POST['user_review'], ENT_QUOTES),
 		':datetime'			=>	time()
 	);
 

@@ -3,8 +3,7 @@ require_once 'head.php';
 require_once './administration/connexion.php';
 ?>
 
-<section class="section_avis">
-    <h2 class="avis_title">Vos avis</h2>
+<section>
     <div id="carouselExample" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <?php
@@ -13,7 +12,7 @@ require_once './administration/connexion.php';
             while ($user = $req->fetch()) {
                 ?>
                 <div class="carousel-item <?php echo $firstItem ? 'active' : ''; ?>">
-                    <div class="card testimonial-item">
+                    <div class="card">
                         <div class="card-header"><?=$user['user_rating']?>
                             <i class="fas fa-star avis"></i>
                         </div>

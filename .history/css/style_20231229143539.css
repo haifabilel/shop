@@ -486,21 +486,21 @@ z-index: 2;
     }
 } */
 .section_avis{
-    margin-top: 5%;
+    margin-top: 10%;
 }
 .testimonial-item h3{
     color: #80005e;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding-bottom: .5rem;
 }
-.testimonial-item p{
+.testimonial-container .container .testimonial-item p{
     color:#000;
 }
-.testimonial-item i{
+.testimonial-container .container .testimonial-item i{
     color:#80005e;
 }
-.carousel-control-prev-icon,
-.carousel-control-next-icon{
+.testimonial-container .container .left-arrow,
+.testimonial-container .container .right-arrow{
     position:absolute;
     top: 40%;
     transform: translateY(-50%);

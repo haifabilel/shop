@@ -4,7 +4,6 @@ require_once './administration/connexion.php';
 ?>
 
 <section class="section_avis">
-    <h2 class="avis_title">Vos avis</h2>
     <div id="carouselExample" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <?php

@@ -312,7 +312,7 @@ z-index: 2;
     padding:2%;
     width:95%;
  }
- .contact_section h2, .avis_title{
+ .contact_section h2{
     text-align: center;
     background: rgba(239, 129, 197, 0.203);
     width:50%;
@@ -485,22 +485,20 @@ z-index: 2;
        opacity:0;
     }
 } */
-.section_avis{
-    margin-top: 5%;
-}
-.testimonial-item h3{
+
+.testimonial-container .container .testimonial-item h3{
     color: #80005e;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding-bottom: .5rem;
 }
-.testimonial-item p{
+.testimonial-container .container .testimonial-item p{
     color:#000;
 }
-.testimonial-item i{
+.testimonial-container .container .testimonial-item i{
     color:#80005e;
 }
-.carousel-control-prev-icon,
-.carousel-control-next-icon{
+.testimonial-container .container .left-arrow,
+.testimonial-container .container .right-arrow{
     position:absolute;
     top: 40%;
     transform: translateY(-50%);
