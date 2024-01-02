@@ -9,9 +9,10 @@ if (isset($_POST['submit'])) {
     $mail= htmlspecialchars($_POST['email'], FILTER_VALIDATE_EMAIL);
     $portable =htmlspecialchars($_POST['portable'], ENT_QUOTES);
     $message= htmlspecialchars($_POST['message'], ENT_QUOTES);
+    $datetime= time();
   
-    $query = "INSERT INTO contact_clients (nom_complet, email, portable, message)
-     VALUES ('$nom','$mail','$portable','$message')";
+    $query = "INSERT INTO contact_clients (nom_complet, email, portable, message,time)
+     VALUES ('$nom','$mail','$portable','$message','$datetime')";
      $statement = $conn->prepare($query);
      $stat = $statement->execute();
      $errors[] = "Message envoyé l'administrateur va vous répondre dans les brefs délais";

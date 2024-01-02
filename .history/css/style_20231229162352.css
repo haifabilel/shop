@@ -324,7 +324,7 @@ z-index: 2;
     width:50%;
     margin-left:22%;
  }
- .testimonial-container h2, .title_rev, .title_message{
+ .testimonial-container h2, .title_rev{
     text-align: center;
     background: rgba(239, 129, 197, 0.203);
     width:50%;
@@ -391,7 +391,7 @@ z-index: 2;
     align-items:center;
     justify-content:center;
 }
-.container h2{
+.container h2 , .title_message{
     color:#80005e;
     font-size: 2rem;
     margin:1rem 8rem; 
@@ -550,7 +550,7 @@ z-index: 2;
     margin-left: 55px;
 }
 .container_message{
-    margin-top: 10%;
+    margin-top: 5%;
 }
 /* =============registre=========== */
 .registre-section h2{

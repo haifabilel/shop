@@ -1,17 +1,17 @@
 <?php 
 require_once 'head.php';
 require_once 'header.php';
-require_once '../administration/connexion.php';
 
 if (isset($_POST['submit'])) {
     //Echapper les caractére spéciaux avec htmlspecialchars
     $nom = htmlspecialchars($_POST['nom_complet'], ENT_QUOTES);
-    $mail= htmlspecialchars($_POST['email'], FILTER_VALIDATE_EMAIL);
+    $mail= htmlspecialchars($_POST['mail'], FILTER_VALIDATE_EMAIL);
     $portable =htmlspecialchars($_POST['portable'], ENT_QUOTES);
     $message= htmlspecialchars($_POST['message'], ENT_QUOTES);
+    $datetime= time();
   
-    $query = "INSERT INTO contact_clients (nom_complet, email, portable, message)
-     VALUES ('$nom','$mail','$portable','$message')";
+    $query = "INSERT INTO contact_clients (nom, prenom, mail, portable, message)
+     VALUES ('$nom','$prenom','$mail','$portable','$message')";
      $statement = $conn->prepare($query);
      $stat = $statement->execute();
      $errors[] = "Message envoyé l'administrateur va vous répondre dans les brefs délais";

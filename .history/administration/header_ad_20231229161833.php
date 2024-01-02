@@ -10,7 +10,7 @@ require_once '../templates/head.php';
             <a href="../index.php">Accueil</a>
             <a href="gerer_articles.php">Articles</a>
             <a href="order.php">Commandes</a>
-            <a href="display_message.php">Messages clients</a>
+            <a href="">Messages clients</a>
         </nav>
         <div class="icons">
             <i class="bi bi-person-fill" id="user-btn"></i>
