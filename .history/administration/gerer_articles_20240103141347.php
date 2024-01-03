@@ -56,7 +56,7 @@ if(isset($_POST['addService'])){
         <tr>
         <td><img class="img_service" src="../uploads/<?php echo $user['image']; ?>" alt="image_card"></td>
         <td><?=$user['titre']?></td>
-        <td><?=$user['prix']?>€</td>
+        <td><?=$user['prix']?></td>
         <td><?=$user['description']?></td>
         <td>
         <a class="btn btn-primary" href="update_service.php?id=<?=$user['id']?>" ><i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a><br><br>

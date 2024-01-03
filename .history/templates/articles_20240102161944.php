@@ -5,36 +5,56 @@ require_once 'head.php';
 require_once 'header.php';
 
 //ajouter articles dans wishlist
+if (isset($_POST['add_wishlist'])) {
+   $id= uniqid();
+   $product_id= $_POST['product_id'];
 
+   $wishlist = $conn->prepare("SELECT * FROM wishlist WHERE user_id = ? AND product_id =?");
+   $wishlist-> execute([$user_id, $product_id]);
+
+   $cart_num =$conn->prepare("SELECT * FROM cart WHERE user_id = ? AND product_id = ?");
+   $cart_num ->execute([$user_id, $product_id]);
+
+   if ($wishlist->rowCount() > 0) {
+     $errors = 'produit exist déja dans wishlist';
+   }elseif ($cart_num->rowCount() > 0) {
+    $errors = 'produit exist déja dans votre panier';
+   }else {
+    $select_price = $conn->prepare("SELECT * FROM articles WHERE id = ? LIMIT 1");
+    $select_price->execute([$product_id]);
+    $fetch_price = $select_price->fetch(PDO::FETCH_ASSOC);
+
+    $insert_wish= $conn->prepare('INSERT INTO wishlist (id, user_id,product_id, price) 
+    VALUES (?,?,?,?)');
+    $insert_wish->execute([$id,$user_id,$product_id,$fetch_price['price']]);
+    $errors= 'Produit ajouté à votre wihlist avec succés';
+   }
+}
 //ajouter articles dans cart
 if (isset($_POST['add_cart'])) {
-    $id= $_GET['id'];
+    $id= uniqid();
     $product_id= $_POST['product_id'];
-    $quantité = $_POST['quantite'];
-
+    $quantité = $_
     $varify_cart =$conn->prepare("SELECT * FROM cart WHERE user_id = ? AND product_id = ?");
     $varify_cart ->execute([$user_id, $product_id]);
  
-    $cart_items =$conn->prepare("SELECT * FROM cart WHERE user_id = ?");
-    $cart_items ->execute([$user_id]);
-
-    if ($varify_cart->rowCount() > 0) {
+    if ($wishlist->rowCount() > 0) {
       $errors = 'produit exist déja dans wishlist';
-    }elseif ($cart_items->rowCount() > 20) {
-     $errors = 'cart is full';
+    }elseif ($cart_num->rowCount() > 0) {
+     $errors = 'produit exist déja dans votre panier';
     }else {
      $select_price = $conn->prepare("SELECT * FROM articles WHERE id = ? LIMIT 1");
      $select_price->execute([$product_id]);
      $fetch_price = $select_price->fetch(PDO::FETCH_ASSOC);
  
-     $insert_cart= $conn->prepare('INSERT INTO cart (id, user_id,product_id, price,quantite) 
+     $insert_wish= $conn->prepare('INSERT INTO wishlist (id, user_id,product_id, price) 
      VALUES (?,?,?,?)');
-     $insert_cart->execute([$id,$user_id,$product_id,$fetch_price['price'],$quantité]);
-     $errors= 'Produit ajouté à votre cart avec succés';
+     $insert_wish->execute([$id,$user_id,$product_id,$fetch_price['price']]);
+     $errors= 'Produit ajouté à votre wihlist avec succés';
     }
  }
 ?>
-<section class="articles_section" style="margin-top: 10%;">
+<section class="articles_section">
     <h2 class="title_articles">Nos articles</h2>
     <div class="separator">
         <div class="hr-circle">

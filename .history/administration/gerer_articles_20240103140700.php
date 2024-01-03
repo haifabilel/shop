@@ -35,15 +35,16 @@ if(isset($_POST['addService'])){
   <!-- Afficher la liste des services enregistrés dans ma bdd -->
 <div class="container_card my-6">
   <h2 class="title_articles">liste des services</h2>
-  <button class="btn btn-primary ajouter_articles" data-bs-toggle="modal" data-bs-target="#ServiceAdmin">Ajouter services <i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i> </button>
 <table class="cinereousTable"></th>
 <thead>
 <tr>
-      <th class="th_image">Image</th>
+      <th>Image</th>
       <th>Titre</th>
       <th>prix</th>
       <th>Description</th>
+      
       <th>Action</th>
+      <th><button class="btn btn-primary mx-2" data-bs-toggle="modal" data-bs-target="#ServiceAdmin">Ajouter services <i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i> </button>
 
 </tr>
 </thead>
@@ -56,7 +57,7 @@ if(isset($_POST['addService'])){
         <tr>
         <td><img class="img_service" src="../uploads/<?php echo $user['image']; ?>" alt="image_card"></td>
         <td><?=$user['titre']?></td>
-        <td><?=$user['prix']?>€</td>
+        <td><?=$user['prix']?></td>
         <td><?=$user['description']?></td>
         <td>
         <a class="btn btn-primary" href="update_service.php?id=<?=$user['id']?>" ><i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a><br><br>

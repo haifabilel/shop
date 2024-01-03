@@ -31,32 +31,39 @@ if(isset($_POST['addService'])){
 
 ?>
 
-<section class="articles_section">
+<section>
+  <div class="container_header p-3" style="margin-top: ;">
+    <div class="content_header d-flex">
+        <p>Services</p>
+    </div>
+      <div class="content_button mt-2">
+          <button class="btn btn-primary mx-2" data-bs-toggle="modal" data-bs-target="#ServiceAdmin">Ajouter services <i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i> </button>
+          <a href="admin_page.php" class="btn btn-primary">Back  <i class="bi bi-backspace"></i></a>
+       </div>
+    </div>
   <!-- Afficher la liste des services enregistrés dans ma bdd -->
 <div class="container_card my-6">
-  <h2 class="title_articles">liste des services</h2>
-  <button class="btn btn-primary ajouter_articles" data-bs-toggle="modal" data-bs-target="#ServiceAdmin">Ajouter services <i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i> </button>
-<table class="cinereousTable"></th>
-<thead>
-<tr>
-      <th class="th_image">Image</th>
+  <h2>liste des services</h2>
+ <table class="blueTable table-responsive">
+    <thead>
+      <tr>
+      <th>Image</th>
       <th>Titre</th>
-      <th>prix</th>
       <th>Description</th>
+      <th>prix</th>
       <th>Action</th>
-
-</tr>
-</thead>
-<tbody>
-<!-- Parcourir la liste des services -->
-<?php
+      </tr>
+    </thead>
+ <tbody>
+    <!-- Parcourir la liste des services -->
+    <?php
      $req = $conn->query('SELECT * FROM articles');
      while($user = $req->fetch()){
         ?>
         <tr>
         <td><img class="img_service" src="../uploads/<?php echo $user['image']; ?>" alt="image_card"></td>
         <td><?=$user['titre']?></td>
-        <td><?=$user['prix']?>€</td>
+        <td><?=$user['prix']?></td>
         <td><?=$user['description']?></td>
         <td>
         <a class="btn btn-primary" href="update_service.php?id=<?=$user['id']?>" ><i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a><br><br>
@@ -68,7 +75,7 @@ if(isset($_POST['addService'])){
      };
     ?>
   </tbody>
-</table>
+ </table>
 </section>
   
 <!-- Modal ajout service-->

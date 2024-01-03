@@ -34,7 +34,7 @@ if (isset($_POST['add_cart'])) {
     }
  }
 ?>
-<section class="articles_section" style="margin-top: 10%;">
+<section class="articles_section" sty>
     <h2 class="title_articles">Nos articles</h2>
     <div class="separator">
         <div class="hr-circle">

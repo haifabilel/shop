@@ -35,28 +35,48 @@ if(isset($_POST['addService'])){
   <!-- Afficher la liste des services enregistrés dans ma bdd -->
 <div class="container_card my-6">
   <h2 class="title_articles">liste des services</h2>
-  <button class="btn btn-primary ajouter_articles" data-bs-toggle="modal" data-bs-target="#ServiceAdmin">Ajouter services <i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i> </button>
-<table class="cinereousTable"></th>
+  <button class="btn btn-primary mx-2" data-bs-toggle="modal" data-bs-target="#ServiceAdmin">Ajouter services <i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i> </button>
+  <table class="cinereousTable">
 <thead>
 <tr>
-      <th class="th_image">Image</th>
+<th>Image</th>
       <th>Titre</th>
-      <th>prix</th>
       <th>Description</th>
+      <th>prix</th>
       <th>Action</th>
-
+<th>head5</th>
 </tr>
 </thead>
 <tbody>
-<!-- Parcourir la liste des services -->
-<?php
+<tr>
+<td>cell1_1</td>
+<td>cell2_1</td>
+<td>cell3_1</td>
+<td>cell4_1</td>
+<td>cell5_1</td>
+</tr>
+</tbody>
+</table>
+  <!-- <table class="blueTable table-responsive">
+    <thead>
+      <tr>
+      <th>Image</th>
+      <th>Titre</th>
+      <th>Description</th>
+      <th>prix</th>
+      <th>Action</th>
+      </tr>
+    </thead>
+ <tbody>
+    <!-- Parcourir la liste des services -->
+    <?php
      $req = $conn->query('SELECT * FROM articles');
      while($user = $req->fetch()){
         ?>
         <tr>
         <td><img class="img_service" src="../uploads/<?php echo $user['image']; ?>" alt="image_card"></td>
         <td><?=$user['titre']?></td>
-        <td><?=$user['prix']?>€</td>
+        <td><?=$user['prix']?></td>
         <td><?=$user['description']?></td>
         <td>
         <a class="btn btn-primary" href="update_service.php?id=<?=$user['id']?>" ><i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a><br><br>
@@ -68,7 +88,7 @@ if(isset($_POST['addService'])){
      };
     ?>
   </tbody>
-</table>
+ </table> -->
 </section>
   
 <!-- Modal ajout service-->
