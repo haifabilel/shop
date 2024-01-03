@@ -26,6 +26,7 @@ if(isset($_POST['addService'])){
         ':image' => $img_des,
     ];
     $stat = $statement->execute($data);
+    header('location:administrateur.php');
 };
 
 ?>
