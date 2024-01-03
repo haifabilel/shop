@@ -34,7 +34,7 @@ if(isset($_POST['addService'])){
   <!-- Afficher la liste des services enregistrés dans ma bdd -->
 <div class="container_card my-6">
   <h2 class="title_articles">liste des services</h2>
-  <button class="btn btn-primary ajouter_articles" data-bs-toggle="modal" data-bs-target="#ajouterArticles">Ajouter articles <i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i> </button>
+  <button class="btn btn-primary ajouter_articles" data-bs-toggle="modal" data-bs-target="#ServiceAdmin">Ajouter services <i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i> </button>
 <table class="cinereousTable"></th>
 <thead>
 <tr>
@@ -71,7 +71,7 @@ if(isset($_POST['addService'])){
 </section>
   
 <!-- Modal ajouter articles-->
-<div class="modal fade" id="ajouterArticles" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+<div class="modal fade" id="ServiceAdmin" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
   <form  method="POST" enctype="multipart/form-data">
     <div class="modal-content">
@@ -92,13 +92,13 @@ if(isset($_POST['addService'])){
   <div class="form-group mb-3">
   <input type="file" name="image" class="form-control">
 </div>
+      </div>
+      <div class="modal-footer">
+      <button type="submit" name="addService" class="btn btn-primary" >Valider</button>
+      </div>
+    </div>
+     </form>
   </div>
-  <div class="modal-footer">
-  <button type="submit" name="addService" class="btn btn-primary" >Valider</button>
-  </div>
-</div>
-  </form>
-</div>
 </div>
 </html>
 
