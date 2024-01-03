@@ -28,7 +28,7 @@ if(isset($_POST['Update'])){
   <div class="form-container">
     <form method="POST" >
           <h2 class="modal-title fs-5" id="exampleModalToggleLabel">Update articles</h2>
-    <div class="form_cont">
+    .form_cont
     <div class="form-group">
         <input type="text" name="titre" value="<?php echo $row['titre']; ?>"  class="form-control form_update"  placeholder="Titre de l'article" required style="margin-top: 30px;"><br>
     </div>
@@ -43,7 +43,6 @@ if(isset($_POST['Update'])){
     </div>
     <div class="modal-footer">
         <button type="submit" name="Update" class="btn btn-primary" style="margin-right:22%;">Update</button>
-    </div>
     </div>
   </form>
  </div>

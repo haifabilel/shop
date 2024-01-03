@@ -44,7 +44,7 @@ if(isset($_POST['Update'])){
     <div class="modal-footer">
         <button type="submit" name="Update" class="btn btn-primary" style="margin-right:22%;">Update</button>
     </div>
-    </div>
+    
   </form>
  </div>
 </section>

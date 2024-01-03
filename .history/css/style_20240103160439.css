@@ -122,9 +122,7 @@ width:100%;
 .form_update{
     width:85%;
 }
-.form_cont{
-    margin-left: 70px;
-}
+.form_cont
 button{
     background:transparent;
     border:none;
