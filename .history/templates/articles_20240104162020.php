@@ -3,8 +3,6 @@
 require_once '../administration/connexion.php';
 session_start();
 $user_id = $_SESSION['user_id'];
-require_once 'head.php';
-require_once 'header.php';
 
 
 if(isset($_POST['add_to_cart'])){
@@ -69,21 +67,23 @@ if(isset($message)){
     <div class="thumb">
         <div class="box-container">
         <?php
-      $select_product = $conn->query("SELECT * FROM `articles`");
-         while($fetch_product = $select_product->fetch()){
+      $select_product = $conn->prepare()"SELECT * FROM `products`") or die('query failed');
+      if(mysqli_num_rows($select_product) > 0){
+         while($fetch_product = mysqli_fetch_assoc($select_product)){
    ?>
       <form method="post" class="box" action="">
-         <img src="../uploads/<?php echo $fetch_product['image']; ?>" alt="">
+         <img src="images/<?php echo $fetch_product['image']; ?>" alt="">
          <div class="name"><?php echo $fetch_product['name']; ?></div>
          <div class="price">$<?php echo $fetch_product['price']; ?>/-</div>
          <input type="number" min="1" name="product_quantity" value="1">
          <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
          <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
          <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']; ?>">
-         <input type="submit" value="add to cart" name="add_to_cart" class="btn btn-primary">
+         <input type="submit" value="add to cart" name="add_to_cart" class="btn">
       </form>
    <?php
       };
+   };
    ?>
 </section>
 </body>

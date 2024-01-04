@@ -3,8 +3,6 @@
 require_once '../administration/connexion.php';
 session_start();
 $user_id = $_SESSION['user_id'];
-require_once 'head.php';
-require_once 'header.php';
 
 
 if(isset($_POST['add_to_cart'])){
@@ -69,22 +67,27 @@ if(isset($message)){
     <div class="thumb">
         <div class="box-container">
         <?php
-      $select_product = $conn->query("SELECT * FROM `articles`");
-         while($fetch_product = $select_product->fetch()){
-   ?>
-      <form method="post" class="box" action="">
-         <img src="../uploads/<?php echo $fetch_product['image']; ?>" alt="">
-         <div class="name"><?php echo $fetch_product['name']; ?></div>
-         <div class="price">$<?php echo $fetch_product['price']; ?>/-</div>
-         <input type="number" min="1" name="product_quantity" value="1">
-         <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
-         <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
-         <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']; ?>">
-         <input type="submit" value="add to cart" name="add_to_cart" class="btn btn-primary">
-      </form>
-   <?php
-      };
-   ?>
+            $req = $conn->query('SELECT * FROM articles');
+            while($user = $req->fetch()){
+        ?>
+            <div class="box">
+                <img src="../uploads/<?php echo $user['image']; ?>" class="img_article" alt="img_article">
+                <h3><?php echo $user['titre']; ?> </h3>
+                <p>Prix :<?php echo $user['prix']; ?> €</p>
+                <input type="hidden" name="product_id" value="<?=$user['id']; ?>">
+                <div class="fles">
+                    <input type="number" name="quantité" placeholder="quantité" required min="1" max="99" maxlength="2" class="quantité">
+                </div>
+                <div class="button">
+                    <button type="submit" name="add_cart"><i class="bi bi-cart-plus-fill"></i></button>
+                    <button type="submit" name="add_wishlist"><i class="bi bi-heart-fill"></i></button>
+                    <!-- <button type="submit" name="voir_article"><i class="bi bi-eye-fill"></i></button> -->
+                    <a href="details_article.php?id=<? echo $user['id']; ?>"></a>
+                </div>
+            </div>
+            <?php 
+       };
+    ?>
 </section>
 </body>
 </html>
