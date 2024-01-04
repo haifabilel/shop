@@ -39,6 +39,7 @@ if(isset($_POST['addService'])){
     <th class="th_image">Image</th>
     <th>Titre</th>
     <th>prix</th>
+    <th>Description</th>
     <th>Action</th>
 
 </tr>

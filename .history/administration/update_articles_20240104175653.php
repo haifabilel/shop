@@ -35,6 +35,9 @@ if(isset($_POST['Update'])){
     <div class="form-group">
         <input type="text" name="prix" value="<?php echo $row['price']; ?>"  class="form-control form_update"  placeholder="Prix de l'article" required><br>
     </div>
+    <div class="form-group">
+      <textarea type="text" class="form-control form_update" name="description" value="<?php echo $row['description']; ?>" placeholder="Description..." required></textarea><br>
+    </div>
     <div class="form-group mb-3">
         <input type="file" name="image"  class="form-control" >
     </div>

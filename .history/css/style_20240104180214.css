@@ -369,6 +369,8 @@ z-index: 2;
  .box-container{
     display:flex;
     flex-wrap: wrap;
+
+
  }
  .thumb .box-container .box{
     text-align:center;
@@ -378,11 +380,10 @@ z-index: 2;
     padding-bottom:1rem;
     color:gray;
     margin-left:70px;
-    width:250px;
  }
  .thumb .box-container .box img{
     height:220px;  
-    width:250px;
+    width:200px;
  }
  
  .thumb .box-container .box:hover img{

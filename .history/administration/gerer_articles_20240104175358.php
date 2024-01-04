@@ -39,6 +39,7 @@ if(isset($_POST['addService'])){
     <th class="th_image">Image</th>
     <th>Titre</th>
     <th>prix</th>
+    <th>Description</th>
     <th>Action</th>
 
 </tr>
@@ -51,8 +52,9 @@ if(isset($_POST['addService'])){
         ?>
         <tr>
         <td><img class="img_service" src="../uploads/<?php echo $user['image']; ?>" alt="image_card"></td>
-        <td><?=$user['name']?></td>
-        <td><?=$user['price']?>€</td>
+        <td><?=$user['titre']?></td>
+        <td><?=$user['prix']?>€</td>
+        <td><?=$user['description']?></td>
         <td>
         <a class="btn btn-primary" href="update_articles.php?id=<?=$user['id']?>" ><i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a><br><br>
         <a class="btn btn-primary" href="supprimer_articles.php?id=<?=$user['id']?>"><i class="fa-regular fa-trash-can"></i></a>

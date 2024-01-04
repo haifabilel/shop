@@ -14,7 +14,7 @@ if(isset($_POST['Update'])){
   extract($_POST);
   if(isset($name) && isset($price) && isset($image)){
     //Modifier les information de l'article
-    $req =$conn->query("UPDATE articles SET name = '$name' , price = '$price' , image = '$image' WHERE id = $id ");
+    $req =$conn->query("UPDATE articles SET name = '$name' , price = '$price' , description = '$description', image = '$image' WHERE id = $id ");
     if($req){
       header('location:gerer_articles.php');
     }
@@ -30,10 +30,13 @@ if(isset($_POST['Update'])){
           <h2 class="modal-title fs-5" id="exampleModalToggleLabel">Update articles</h2>
     <div class="form_cont">
     <div class="form-group">
-        <input type="text" name="titre" value="<?php echo $row['name']; ?>"  class="form-control form_update"  placeholder="Titre de l'article" required style="margin-top: 30px;"><br>
+        <input type="text" name="titre" value="<?php echo $row['titre']; ?>"  class="form-control form_update"  placeholder="Titre de l'article" required style="margin-top: 30px;"><br>
     </div>
     <div class="form-group">
-        <input type="text" name="prix" value="<?php echo $row['price']; ?>"  class="form-control form_update"  placeholder="Prix de l'article" required><br>
+        <input type="text" name="prix" value="<?php echo $row['prix']; ?>"  class="form-control form_update"  placeholder="Prix de l'article" required><br>
+    </div>
+    <div class="form-group">
+      <textarea type="text" class="form-control form_update" name="description" value="<?php echo $row['description']; ?>" placeholder="Description..." required></textarea><br>
     </div>
     <div class="form-group mb-3">
         <input type="file" name="image"  class="form-control" >

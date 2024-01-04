@@ -53,7 +53,7 @@ if(isset($message)){
          while($fetch_product = $select_product->fetch()){
    ?>
       <form method="post" class="box" action="">
-         <img src="../uploads/<?php echo $fetch_product['image']; ?>" alt="img_art" class="articles_img">
+         <img src="../uploads/<?php echo $fetch_product['image']; ?>" alt="img_art">
          <div class="name"><?php echo $fetch_product['name']; ?></div>
          <div class="price">$<?php echo $fetch_product['price']; ?>/-</div>
          <input type="number" min="1" name="product_quantity" value="1">
