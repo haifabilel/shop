@@ -19,11 +19,29 @@ if(isset($_POST['add_to_cart'])){
    if($select_cart->rowCount() > 0){
       $message[] = 'product already added to cart!';
    }else{
-    $conn->query("INSERT INTO `cart`(user_id, name, price, image, quantity) VALUES('$user_id', '$product_name', '$product_price', '$product_image', '$product_quantity')");
+    $conn->prepare("INSERT INTO `cart`(user_id, name, price, image, quantity) VALUES('$user_id', '$product_name', '$product_price', '$product_image', '$product_quantity')");
       $message[] = 'product added to cart!';
    }
 
 };
+
+if(isset($_POST['update_cart'])){
+    $update_quantity = $_POST['cart_quantity'];
+    $update_id = $_POST['cart_id'];
+    $conn->prepare("UPDATE `cart` SET quantity = '$update_quantity' WHERE id = '$update_id'");
+    $message[] = 'cart quantity updated successfully!';
+ }
+ 
+ if(isset($_GET['remove'])){
+    $remove_id = $_GET['remove'];
+    $conn->prepare("DELETE FROM `cart` WHERE id = '$remove_id'");
+    header('location:index.php');
+ }
+   
+ if(isset($_GET['delete_all'])){
+    $conn->prepare("DELETE FROM `cart` WHERE user_id = '$user_id'");
+    header('location:index.php');
+ }
  
  ?>
 

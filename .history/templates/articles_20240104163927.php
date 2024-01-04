@@ -24,6 +24,24 @@ if(isset($_POST['add_to_cart'])){
    }
 
 };
+
+if(isset($_POST['update_cart'])){
+    $update_quantity = $_POST['cart_quantity'];
+    $update_id = $_POST['cart_id'];
+    $conn->query("UPDATE `cart` SET quantity = '$update_quantity' WHERE id = '$update_id'");
+    $message[] = 'cart quantity updated successfully!';
+ }
+ 
+ if(isset($_GET['remove'])){
+    $remove_id = $_GET['remove'];
+    $conn->query("DELETE FROM `cart` WHERE id = '$remove_id'");
+    header('location:index.php');
+ }
+   
+ if(isset($_GET['delete_all'])){
+    $conn->query("DELETE FROM `cart` WHERE user_id = '$user_id'");
+    header('location:index.php');
+ }
  
  ?>
 

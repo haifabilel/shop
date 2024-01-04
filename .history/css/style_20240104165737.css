@@ -467,10 +467,7 @@ z-index: 2;
 .delete-btn{
    background-color: var(--red);
 }
-.img_panier{
-    width:200px;
-    height:200px;
-}
+.img_panier{}
 /* =============avis clients=========== */
 .reviews .card{
     width:100%;

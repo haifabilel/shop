@@ -45,7 +45,7 @@ if(isset($_POST['update_cart'])){
          <tr>
             <td class="img_panier"><img src="../uploads/<?php echo $fetch_cart['image']; ?>" alt="img_panier" class="img_panier"></td>
             <td><?php echo $fetch_cart['name']; ?></td>
-            <td>$<?php echo $fetch_cart['price']; ?></td>
+            <td>$<?php echo $fetch_cart['price']; ?>/-</td>
             <td>
                <form action="" method="post">
                   <input type="hidden" name="cart_id" value="<?php echo $fetch_cart['id']; ?>">
