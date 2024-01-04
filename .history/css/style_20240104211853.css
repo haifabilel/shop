@@ -464,12 +464,10 @@ z-index: 2;
     height:100px;
 }
 span{
-    color:#FFFF;
-    font-size: 1rem;
+    color:#80005e;
+    font-size: 1.5rem;
 }
-.grand_total{
-    background-color: #D23298;
-}
+grand_total
 /* =============avis clients=========== */
 .reviews .card{
     width:100%;

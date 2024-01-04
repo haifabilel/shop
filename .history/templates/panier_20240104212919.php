@@ -74,7 +74,7 @@ if(isset($_POST['update_cart'])){
       ?>
       <tr class="table-bottom">
          <td class="grand_total" colspan="4"><span>Grand total :</span> </td>
-         <td class="grand_total"><span>€<?php echo $grand_total; ?></span></td>
+         <td class="grand_total"><span>€</span><?php echo $grand_total; ?>/-</td>
          <td><a href="panier.php?delete_all" onclick="return confirm('delete all from cart?');" class="delete-btn <?php echo ($grand_total > 1)?'':'disabled'; ?>">delete all</a></td>
       </tr>
    </tbody>
