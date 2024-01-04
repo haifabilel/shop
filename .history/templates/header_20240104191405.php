@@ -14,15 +14,17 @@ require_once 'head.php';
         </nav>
         <div class="icons">
             <i class="bi bi-person-fill" id="user-btn"></i>
+            <a href="wishlist.php" class="cart-btn"><i class="bi bi-suit-heart-fill"></i><sup class="sup_header"><?php echo $row;?></sup></a>
             <?php
              require_once '../administration/connexion.php';
-             $req = $conn->query("SELECT * FROM `cart`");
-             $row = $req->rowCount();
-       ?>
-            <!-- <a href="wishlist.php" class="cart-btn"><i class="bi bi-suit-heart-fill"></i><sup class="sup_header">0</sup></a> -->
-            <a href="panier.php" class="cart-btn"><i class="bi bi-cart-fill"></i><sup class="sup_header"><?php echo $row;?></sup></a>
+             $req= $conn->query("SELECT * FROM cart");
+             $row = $select_row->fetch(){
+             ?>
+            <a href="panier.php" class="cart-btn"><i class="bi bi-cart-fill"></i><sup class="sup_header">0</sup></a>
             <i class="bi bi-list" id="menu-btn"></i>
         </div>
+        <?php
+        } ?>
         <div class="user-box">
             <a href="../administration/login.php" class="btn">Login</a>
             <a href="../administration/registre.php" class="btn">Registre</a>
@@ -31,13 +33,6 @@ require_once 'head.php';
             </form>
         </div>
     </div>
-      
+    <script src="../js/script.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-      <script src="../js/script.js"></script>
-      <script src="../js/panier.js"></script>
-    </header>
-<script>
-   
-</script>
-
+</header>

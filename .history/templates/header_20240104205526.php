@@ -16,10 +16,16 @@ require_once 'head.php';
             <i class="bi bi-person-fill" id="user-btn"></i>
             <?php
              require_once '../administration/connexion.php';
+             // Effectuez la requête pour obtenir le nombre d'articles dans le panier
+$req = $conn->query("SELECT COUNT(*) as cartCount FROM `cart`");
+$row = $req->fetch(PDO::FETCH_ASSOC);
+
+// Retournez le résultat au format JSON
+echo json_encode(['cartCount' => $row['cartCount']]);
              $req = $conn->query("SELECT * FROM `cart`");
              $row = $req->rowCount();
        ?>
-            <!-- <a href="wishlist.php" class="cart-btn"><i class="bi bi-suit-heart-fill"></i><sup class="sup_header">0</sup></a> -->
+            <a href="wishlist.php" class="cart-btn"><i class="bi bi-suit-heart-fill"></i><sup class="sup_header">0</sup></a>
             <a href="panier.php" class="cart-btn"><i class="bi bi-cart-fill"></i><sup class="sup_header"><?php echo $row;?></sup></a>
             <i class="bi bi-list" id="menu-btn"></i>
         </div>
@@ -31,13 +37,7 @@ require_once 'head.php';
             </form>
         </div>
     </div>
-      
+      <script src="../js/script.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
       <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-      <script src="../js/script.js"></script>
-      <script src="../js/panier.js"></script>
     </header>
-<script>
-   
-</script>
-

@@ -60,3 +60,6 @@ slider.addEventListener('click',function(ev){
         resetTimer();
     }
 })
+
+ ;
+});

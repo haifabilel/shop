@@ -20,7 +20,7 @@ if(isset($_POST['add_to_cart'])){
       $message[] = 'product already added to cart!';
    }else{
     $conn->query("INSERT INTO `cart`(user_id, name, price, image, quantity) VALUES('$user_id', '$product_name', '$product_price', '$product_image', '$product_quantity')");
-    $message[] = 'product added to cart!';
+      $message[] = 'product added to cart!';
       
    }
 
