@@ -9,9 +9,9 @@ require_once ('../administration/header_ad.php');
 <thead>
 <tr>
     <th>Nom complet</th>
-    <th>Adresse email</th>
-    <th>Portable</th>
-    <th>Message</th>
+    <th>prix</th>
+    <th>Description</th>
+    <th>Action</th>
 
 </tr>
 </thead>

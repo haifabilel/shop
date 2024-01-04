@@ -16,7 +16,7 @@ require_once 'head.php';
         <div class="icons">
             <i class="bi bi-person-fill" id="user-btn"></i>
             <a href="wishlist.php" class="cart-btn"><i class="bi bi-suit-heart-fill"></i><sup class="sup_header">0</sup></a>
-            <a href="panier.php" class="cart-btn"><i class="bi bi-cart-fill"></i><sup class="sup_header">0</sup></a>
+            <a href="cart.php" class="cart-btn"><i class="bi bi-cart-fill"></i><sup class="sup_header">0</sup></a>
             <i class="bi bi-list" id="menu-btn"></i>
         </div>
         <div class="user-box">

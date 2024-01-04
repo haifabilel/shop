@@ -36,7 +36,7 @@ VALUES (:user_name, :user_rating, :user_review, :datetime)";
 				<i class="fas fa-star star-light submit_star mr-1" id="submit_star_5" data-rating="5"></i>
 	        </h4>
             <form method="POST" enctype="multipart/form-data">
-			<div class="form_conta">
+			<div class="form_cont">
 	        	<div class="form-group">
 	        		<input type="text" name="user_name" id="user_name" class="form-control" placeholder="Entrer votre nom complét" />
 	        	</div><br>
@@ -46,7 +46,6 @@ VALUES (:user_name, :user_rating, :user_review, :datetime)";
 	        	<div class="form-group text-center mt-4">
 	        		<button type="submit" name="submit" class="btn btn-primary" id="save_review">Submit</button>
 	        	</div>
-				</div>
             </form>
 		</div>
     </div>

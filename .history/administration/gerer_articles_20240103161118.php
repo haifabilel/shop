@@ -33,16 +33,16 @@ if(isset($_POST['addService'])){
 <section class="articles_section">
   <!-- Afficher la liste des services enregistrés dans ma bdd -->
 <div class="container_card my-6">
-  <!-- <h2 class="title_articles">liste des articles</h2> -->
+  <h2 class="title_articles">liste des articles</h2>
   <button class="btn btn-primary ajouter_articles" data-bs-toggle="modal" data-bs-target="#ajouterArticles">Ajouter articles <i class="fa-solid fa-circle-plus" style="color: #ffffff;"></i> </button>
 <table class="cinereousTable"></th>
 <thead>
 <tr>
-    <th class="th_image">Image</th>
-    <th>Titre</th>
-    <th>prix</th>
-    <th>Description</th>
-    <th>Action</th>
+      <th class="th_image">Image</th>
+      <th>Titre</th>
+      <th>prix</th>
+      <th>Description</th>
+      <th>Action</th>
 
 </tr>
 </thead>
@@ -76,7 +76,7 @@ if(isset($_POST['addService'])){
   <form  method="POST" enctype="multipart/form-data">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title fs-5" id="exampleModalToggleLabel">Ajouter article</h3>
+        <h3 class="modal-title fs-5" id="exampleModalToggleLabel">Ajouter service</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -101,4 +101,5 @@ if(isset($_POST['addService'])){
 </div>
 </div>
 </html>
+<?php require_once ('../templates/footer.php'); ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

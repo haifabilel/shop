@@ -10,13 +10,13 @@ require_once 'head.php';
             <a href="../index.php">Accueil</a>
             <a href="articles.php">Articles</a>
             <a href="order.php">Commandes</a>
-            <a href="donner_avis.php">Vos avis</a>
+            <a href="">Vos avis</a>
             <a href="contact.php">Contact</a>
         </nav>
         <div class="icons">
             <i class="bi bi-person-fill" id="user-btn"></i>
             <a href="wishlist.php" class="cart-btn"><i class="bi bi-suit-heart-fill"></i><sup class="sup_header">0</sup></a>
-            <a href="panier.php" class="cart-btn"><i class="bi bi-cart-fill"></i><sup class="sup_header">0</sup></a>
+            <a href="cart.php" class="cart-btn"><i class="bi bi-cart-fill"></i><sup class="sup_header">0</sup></a>
             <i class="bi bi-list" id="menu-btn"></i>
         </div>
         <div class="user-box">

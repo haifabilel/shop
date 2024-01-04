@@ -33,4 +33,5 @@ require_once ('../administration/header_ad.php');
     ?>
    </tbody>
  </table>
+ <?php require_once ('../templates/footer.php'); ?>
 </section>

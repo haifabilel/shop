@@ -8,10 +8,11 @@ require_once ('../administration/header_ad.php');
       <table class="cinereousTable"></th>
 <thead>
 <tr>
-    <th>Nom complet</th>
-    <th>Adresse email</th>
-    <th>Portable</th>
-    <th>Message</th>
+    <th class="th_image">Image</th>
+    <th>Titre</th>
+    <th>prix</th>
+    <th>Description</th>
+    <th>Action</th>
 
 </tr>
 </thead>
