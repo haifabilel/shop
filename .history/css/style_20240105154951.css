@@ -520,13 +520,7 @@ margin-left: 25%;
     margin:5px;
 }
 .display-order h4{
-    background-color:#b8148c;
-    color: #FFFF;
-}
-.display-order span.grand-total{
-    width: 100%;
-    background-color: #d8ccccfe;
-    color: #FFFF;
+    background-color: #80005e;
 }
 /* =============avis clients=========== */
 .reviews .card{

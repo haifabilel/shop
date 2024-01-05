@@ -66,8 +66,8 @@ if(isset($_POST['order_btn'])){
    <h1 class="heading">Finaliser votre commande</h1>
 
    <form action="" method="post">
+
    <div class="display-order">
-   <h4>Resumé panier</h4>
       <?php
          $select_cart =$conn->query("SELECT * FROM `cart`");
          $total = 0;
@@ -89,31 +89,39 @@ if(isset($_POST['order_btn'])){
 
       <div class="flex">
          <div class="inputBox">
-            <input type="text" placeholder="Entrer votre nom et prénom" name="name" required>
+            <span>your name</span>
+            <input type="text" placeholder="enter your name" name="name" required>
          </div>
          <div class="inputBox">
-            <input type="text" placeholder="Entrer votre numéro portable" name="number" required>
+            <span>your number</span>
+            <input type="number" placeholder="enter your number" name="number" required>
          </div>
          <div class="inputBox">
-            <input type="email" placeholder="Entrer votre adresse email" name="email" required>
+            <span>your email</span>
+            <input type="email" placeholder="enter your email" name="email" required>
          </div>
          <div class="inputBox">
+            <span>payment method</span>
             <select name="method">
+               <option value="cash on delivery" selected>cash on devlivery</option>
                <option value="credit cart">credit cart</option>
                <option value="paypal">paypal</option>
             </select>
          </div>
          <div class="inputBox">
-            <input type="text" placeholder="address line 1" name="flat" required>
+            <span>address line 1</span>
+            <input type="text" placeholder="e.g. flat no." name="flat" required>
          </div>
          <div class="inputBox">
-            <input type="text" placeholder="Rue" name="street" required>
+            <span>address line 2</span>
+            <input type="text" placeholder="e.g. street name" name="street" required>
          </div>
          <div class="inputBox">
-            <input type="text" placeholder="Pays" name="country" required>
+            <span>country</span>
+            <input type="text" placeholder="e.g. india" name="country" required>
          </div>
       </div>
-      <input type="submit" value="order now" name="order_btn" class="btn mt-2">
+      <input type="submit" value="order now" name="order_btn" class="btn">
    </form>
 
 </section>

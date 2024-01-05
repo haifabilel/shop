@@ -513,20 +513,7 @@ margin-left: 25%;
 .display-order span{
     display: inline-block;
     border-radius: .5rem;
-    padding: .5rem 1rem;
-    font-size: 1.2rem;
-    color: #80005e;
-    background-color: #d5c7d135;
-    margin:5px;
-}
-.display-order h4{
-    background-color:#b8148c;
-    color: #FFFF;
-}
-.display-order span.grand-total{
-    width: 100%;
-    background-color: #d8ccccfe;
-    color: #FFFF;
+    padding: .5rem;
 }
 /* =============avis clients=========== */
 .reviews .card{

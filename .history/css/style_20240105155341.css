@@ -523,10 +523,8 @@ margin-left: 25%;
     background-color:#b8148c;
     color: #FFFF;
 }
-.display-order span.grand-total{
+.display-order span.grand_total{
     width: 100%;
-    background-color: #d8ccccfe;
-    color: #FFFF;
 }
 /* =============avis clients=========== */
 .reviews .card{

@@ -66,8 +66,8 @@ if(isset($_POST['order_btn'])){
    <h1 class="heading">Finaliser votre commande</h1>
 
    <form action="" method="post">
+
    <div class="display-order">
-   <h4>Resumé panier</h4>
       <?php
          $select_cart =$conn->query("SELECT * FROM `cart`");
          $total = 0;

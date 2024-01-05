@@ -519,15 +519,6 @@ margin-left: 25%;
     background-color: #d5c7d135;
     margin:5px;
 }
-.display-order h4{
-    background-color:#b8148c;
-    color: #FFFF;
-}
-.display-order span.grand-total{
-    width: 100%;
-    background-color: #d8ccccfe;
-    color: #FFFF;
-}
 /* =============avis clients=========== */
 .reviews .card{
     width:100%;

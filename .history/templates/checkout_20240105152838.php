@@ -66,8 +66,8 @@ if(isset($_POST['order_btn'])){
    <h1 class="heading">Finaliser votre commande</h1>
 
    <form action="" method="post">
+
    <div class="display-order">
-   <h4>Resumé panier</h4>
       <?php
          $select_cart =$conn->query("SELECT * FROM `cart`");
          $total = 0;
@@ -89,27 +89,35 @@ if(isset($_POST['order_btn'])){
 
       <div class="flex">
          <div class="inputBox">
-            <input type="text" placeholder="Entrer votre nom et prénom" name="name" required>
+            <span
+            <input type="text" placeholder="enter your name" name="name" required>
          </div>
          <div class="inputBox">
-            <input type="text" placeholder="Entrer votre numéro portable" name="number" required>
+            <span>y
+            <input type="number" placeholder="enter your number" name="number" required>
          </div>
          <div class="inputBox">
-            <input type="email" placeholder="Entrer votre adresse email" name="email" required>
+            <span>
+            <input type="email" placeholder="enter your email" name="email" required>
          </div>
          <div class="inputBox">
+            <span>paym
             <select name="method">
+               <option value="cash on delivery" selected>cash on devlivery</option>
                <option value="credit cart">credit cart</option>
                <option value="paypal">paypal</option>
             </select>
          </div>
          <div class="inputBox">
+            <span>addr
             <input type="text" placeholder="address line 1" name="flat" required>
          </div>
          <div class="inputBox">
+            <span>addr
             <input type="text" placeholder="Rue" name="street" required>
          </div>
          <div class="inputBox">
+            
             <input type="text" placeholder="Pays" name="country" required>
          </div>
       </div>
