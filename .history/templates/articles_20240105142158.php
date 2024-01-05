@@ -61,7 +61,7 @@ if(isset($message)){
          <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
          <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
          <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']; ?>">
-         <input type="submit" value="Ajouter au panier" name="add_to_cart" class="btn mt-2">
+         <input type="submit" value="Ajouter au panier" name="add_to_cart" class="btn mt-6">
       </form>
    <?php
       };

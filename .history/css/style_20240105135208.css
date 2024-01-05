@@ -81,9 +81,10 @@ ul{
 
 .btn,.btn_index{
     line-height: 2;
-    background-color:#80005e;
+    background-color:#ff00ff5f;
     padding: 5px 35px;
     display:inline-block;
+    border-radius: 30px;
     color:#FFFF;
     text-transform: capitalize;
     font-size: 16px;
@@ -101,7 +102,7 @@ ul{
     content:'';
     left:0;
     top:0;
-    background:#b8148c;
+    background:#80005e;
     height:100%;
     width:0;
     z-index:-1;
@@ -470,9 +471,7 @@ span{
     background-color: #D23298;
 }
 #checkout{
-    margin-left: 40%;
-    background-color: #D23298;
-    margin-top: 20px;
+    justify-content: center;
 }
 /* =============avis clients=========== */
 .reviews .card{

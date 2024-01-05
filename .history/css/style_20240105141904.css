@@ -81,9 +81,10 @@ ul{
 
 .btn,.btn_index{
     line-height: 2;
-    background-color:#80005e;
+    background-color:;
     padding: 5px 35px;
     display:inline-block;
+    border-radius: 30px;
     color:#FFFF;
     text-transform: capitalize;
     font-size: 16px;
@@ -101,7 +102,7 @@ ul{
     content:'';
     left:0;
     top:0;
-    background:#b8148c;
+    background:#80005e;
     height:100%;
     width:0;
     z-index:-1;

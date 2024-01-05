@@ -81,7 +81,7 @@ if(isset($_POST['update_cart'])){
    </table>
 
    <div class="cart-btn">  
-      <a href="#" class="btn <?php echo ($grand_total > 1)?'':'disabled'; ?>" id="checkout">proceed to checkout</a>
+      <a href="#" class="btn <?php echo ($grand_total > 1)?'':'disabled'; ?>" id="che">proceed to checkout</a>
    </div>
 
 </div>

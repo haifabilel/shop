@@ -4,8 +4,8 @@ require_once ('../templates/head.php');
 require_once ('../administration/header_ad.php');
 
 
-//Ajouter article depuis le dashbord admin
-if(isset($_POST['addArticle'])){
+//Ajouter service depuis le dashbord admin
+if(isset($_POST['addService'])){
     $name = $_POST['name'];
     $price = $_POST['price'];
     $image = $_FILES['image'];
@@ -14,8 +14,8 @@ if(isset($_POST['addArticle'])){
     $img_des = "../uploads/".$img_name;
     move_uploaded_file($img_loc,'../uploads/'.$img_name);
 // Sécuriser contre les injections SQL
-    $query ="INSERT INTO articles (name, image,price)
-    VALUES (:name, :image, :price)";
+    $query = "INSERT INTO articles (name,price, image)
+    VALUES (:name,:price, :image)";
     $statement = $conn->prepare($query);
   
     $data = [
@@ -77,10 +77,10 @@ if(isset($_POST['addArticle'])){
       </div>
       <div class="modal-body">
       <div class="form-group">
-       <input type="text" name="name" class="form-control"  placeholder="Titre" required><br>
+       <input type="text" name="titre" class="form-control"  placeholder="Titre" required><br>
       </div>
       <div class="form-group">
-       <input type="number" name="price" class="form-control"  placeholder="prix" required><br>
+       <input type="text" name="prix" class="form-control"  placeholder="prix" required><br>
       </div>
   <div class="form-group mb-3">
   <input type="file" name="image" class="form-control">
