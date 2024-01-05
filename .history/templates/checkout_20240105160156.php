@@ -113,7 +113,7 @@ if(isset($_POST['order_btn'])){
             <input type="text" placeholder="Pays" name="country" required>
          </div>
       </div>
-      <input type="submit" value="order now" name="order_btn" class="btn mt-2" id="btn_check">
+      <input type="submit" value="order now" name="order_btn" class="btn mt-2" id="btn_che">
    </form>
 
 </section>

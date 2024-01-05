@@ -10,7 +10,7 @@ require_once '../templates/head.php';
             <a href="../index.php">Accueil</a>
             <a href="gerer_articles.php">Articles</a>
             <a href="order.php">Commandes</a>
-            <a href="fetch_reviews.php">Commentaires</a>
+            <a href="order.php">Avis</a>
             <a href="display_message.php">Messages clients</a>
         </nav>
         <div class="icons">

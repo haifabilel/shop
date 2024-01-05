@@ -328,8 +328,7 @@ z-index: 2;
     padding:2%;
     width:95%;
  }
- .contact_section h2, .avis_title,
-  .modal-title, .title_rev{
+ .contact_section h2, .avis_title, .modal-title{
     text-align: center;
     background: rgba(239, 129, 197, 0.203);
     width:50%;
@@ -529,9 +528,7 @@ margin-left: 25%;
     background-color: #d8ccccfe;
     color: #FFFF;
 }
-#btn_check{
-    width:100%;
-}
+.display-order
 /* =============avis clients=========== */
 .reviews .card{
     width:100%;
@@ -560,9 +557,8 @@ margin-left: 25%;
     width:50%;
     margin-left:25%;
 }
-.commentaires_sec{
-    margin-top: 10%;
-}
+
+
 .testimonial-container{
     padding: 6% 0;
 }
