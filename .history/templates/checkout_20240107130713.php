@@ -1,8 +1,11 @@
 <?php
+
 require_once '../administration/connexion.php';
 require_once 'head.php';
+
 ?>
 <body>
+
 <div class="container">
 
 <section class="checkout-form">
@@ -112,7 +115,6 @@ if(isset($_POST['order_btn'])){
             <p> Votre mode de payement : <span>".$method."</span> </p>
          </div>
             <a href='paypal.php' class='btn'>continue shopping</a>
-            <a href='panier.php' class='btn'>Retourner au panier</a>
          </div>
       </div>
       ";

@@ -476,7 +476,7 @@ span{
     margin-top: 20px;
 }
 /* ========section checkout============ */
-.checkout-form form{
+.checkout-form form ,{
 padding:2rem;
 border-radius: .5rem;
 background-color: #d5c7d145;
@@ -531,16 +531,6 @@ margin-left: 25%;
 }
 #btn_check{
     width:100%;
-}
-.order-message-container{
-    padding:2rem;
-border-radius: .5rem;
-background-color: #d5c7d145;
-width: 50%;
-margin-left: 25%;
-margin-bottom: 30px;
-margin-top: 30px;
-text-align: center;
 }
 /* =============avis clients=========== */
 .reviews .card{

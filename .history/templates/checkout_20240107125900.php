@@ -1,8 +1,5 @@
-<?php
-require_once '../administration/connexion.php';
-require_once 'head.php';
-?>
 <body>
+
 <div class="container">
 
 <section class="checkout-form">
@@ -68,8 +65,9 @@ require_once 'head.php';
 <script src="js/script.js"></script>
    
 </body>
-</html>
 <?php
+require_once '../administration/connexion.php';
+require_once 'head.php';
 
 if(isset($_POST['order_btn'])){
 
@@ -107,18 +105,18 @@ if(isset($_POST['order_btn'])){
          <div class='customer-details'>
             <p> Votre nom complét : <span>".$name."</span> </p>
             <p> Votre numéro portable : <span>".$number."</span> </p>
-            <p> Votre adresse eamil: <span>".$email."</span> </p>
-            <p> Votre adresse : <span>".$flat.", ".$street.", ".$country."</span> </p>
+            <p> Votre email : <span>".$email."</span> </p>
+            <p> Votre addresse : <span>".$flat.", ".$street.", ".$country."</span> </p>
             <p> Votre mode de payement : <span>".$method."</span> </p>
          </div>
-            <a href='paypal.php' class='btn'>continue shopping</a>
-            <a href='panier.php' class='btn'>Retourner au panier</a>
+            <a href='products.php' class='btn'>continue shopping</a>
          </div>
       </div>
       ";
    }
-
 }
 
 ?>
 
+
+</html>

@@ -526,7 +526,7 @@ margin-left: 25%;
 }
 .display-order span.grand-total{
     width: 100%;
-    background-color: #d8ccccfe;
+    background-color: #a49e9efe;
     color: #FFFF;
 }
 #btn_check{
@@ -538,7 +538,6 @@ border-radius: .5rem;
 background-color: #d5c7d145;
 width: 50%;
 margin-left: 25%;
-margin-bottom: 30px;
 margin-top: 30px;
 text-align: center;
 }
