@@ -1,12 +1,13 @@
 <?php
 require_once '../administration/connexion.php';
 session_start();
+$user_id = $_SESSION['user_id'];
 require_once 'head.php';
 require_once 'header.php';
 
 
 if(isset($_POST['add_to_cart'])){
-   $user_id =['user_id'];
+
    $product_name = $_POST['product_name'];
    $product_price = $_POST['product_price'];
    $product_image = $_POST['product_image'];

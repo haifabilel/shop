@@ -538,12 +538,7 @@ margin-left: 25%;
    min-height: 100vh;
    overflow-y: scroll;
    overflow-x: hidden;
-   padding: 2rem;
-   display:flex;
-   align-items: center;
-   justify-content: center;
-   z-index: 1100;
-   background-color: #D5C7D1;
+   padding
 }
 /* =============avis clients=========== */
 .reviews .card{
