@@ -533,34 +533,25 @@ margin-left: 25%;
     width:100%;
 }
 .order-message-container{
-    padding:2rem;
-border-radius: .5rem;
-background-color: #d5c7d145;
-width: 50%;
-margin-left: 25%;
-margin-bottom: 30px;
-margin-top: 30px;
-text-align: center;
+   position:fixed;
+   top:0; left:0;
+   min-height: 100vh;
+   overflow-y: scroll;
+   overflow-x: hidden;
+   padding: 2rem;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 1100;
+   background-color: #D5C7D1;
+   width: 100%;
 }
-.order-message-container .order-detail span.total{
-    display: block;
-    background-color:white;
-    color:#000000;
-    width: 50%;
-    margin-left: 25%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.order-message-container .message-container{
+width:50rem;
+background-color: #F0F0F0;
+border-radius: ;
 }
-.customer-details p{
-    font-weight: bold;
-    font-size: 1rem;
-}
-.customer-details span{
-    color:#D23298;
-}
-.order-detail span{
-    font-size: 1.2rem;
-}
+
 /* =============avis clients=========== */
 .reviews .card{
     width:100%;

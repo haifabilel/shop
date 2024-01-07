@@ -544,8 +544,8 @@ text-align: center;
 }
 .order-message-container .order-detail span.total{
     display: block;
-    background-color:white;
-    color:#000000;
+    background-color:#808080;
+    color:white;
     width: 50%;
     margin-left: 25%;
     margin-top: 10px;

@@ -105,7 +105,7 @@ if(isset($_POST['order_btn'])){
             <span class='total'> total : $".$price_total."/-  </span>
          </div>
          <div class='customer-details'>
-            <h4> Votre coordonnées : </h4>
+         
             <p> Votre nom complét : <span>".$name."</span> </p>
             <p> Votre numéro portable : <span>".$number."</span> </p>
             <p> Votre adresse eamil: <span>".$email."</span> </p>

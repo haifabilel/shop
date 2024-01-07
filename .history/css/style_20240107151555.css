@@ -544,22 +544,10 @@ text-align: center;
 }
 .order-message-container .order-detail span.total{
     display: block;
-    background-color:white;
-    color:#000000;
+    background-color: #D5C7D1;
+    color:white;
     width: 50%;
-    margin-left: 25%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.customer-details p{
-    font-weight: bold;
-    font-size: 1rem;
-}
-.customer-details span{
-    color:#D23298;
-}
-.order-detail span{
-    font-size: 1.2rem;
+    margin
 }
 /* =============avis clients=========== */
 .reviews .card{
